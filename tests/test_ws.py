@@ -3,8 +3,8 @@ from unittest.mock import Mock
 import pytest
 from zeep.exceptions import Fault
 
-from fiskalhr.errors import ResponseError
 from fiskalhr.enums import ResponseErrorEnum
+from fiskalhr.errors import ResponseError
 from fiskalhr.invoice import Invoice, InvoiceWithDoc
 from fiskalhr.ws import FiskalClient
 

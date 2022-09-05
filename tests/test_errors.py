@@ -1,7 +1,7 @@
 from unittest.mock import Mock
 
-from fiskalhr.errors import ResponseError, ResponseErrorDetail
 from fiskalhr.enums import ResponseErrorEnum
+from fiskalhr.errors import ResponseError, ResponseErrorDetail
 
 
 def test_parse_error_details():

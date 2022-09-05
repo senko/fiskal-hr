@@ -26,8 +26,10 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
+        sudo apt install libxmlsec1-dev
         python -m pip install --upgrade pip
-        python -m pip install black coverage flake8 isort pytest
+        python -m pip install cryptography xmlsec zeep
+        python -m pip install black coverage flake8 freezegun isort pytest pytest-cov
     - name: Lint with flake8
       run: |
         flake8 fiskalhr tests

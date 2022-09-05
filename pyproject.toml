@@ -18,7 +18,6 @@ classifiers = [
 ]
 dependencies = [
     "cryptography",
-    "freezegun",
     "xmlsec",
     "zeep",
 ]

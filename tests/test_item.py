@@ -2,7 +2,7 @@ from decimal import Decimal
 
 import pytest
 
-from fiskalhr.item import TaxItem, NamedTaxItem, Fee
+from fiskalhr.item import Fee, NamedTaxItem, TaxItem
 
 
 def test_tax_item():
