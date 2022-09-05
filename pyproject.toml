@@ -1,3 +1,35 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fiskal-hr"
+version = "0.0.1"
+authors = [
+    { name="Senko Rasic", email="senko@senko.net" },
+]
+description = "Client for Croatian Fiskalizacija tax service"
+readme = "README.md"
+requires-python = ">=3.6"
+keywords = ["fiskalizacija"]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "cryptography",
+    "freezegun",
+    "xmlsec",
+    "zeep",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/senko/fiskal-hr/"
+"Bug Tracker" = "https://github.com/senko/fiskal-hr/issues"
+
+[tool.setuptools]
+packages = ["fiskalhr"]
+
 [tool.isort]
 profile = "black"
 
