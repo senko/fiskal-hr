@@ -418,7 +418,7 @@ def test_get_qr_link_using_zki():
     assert parts.scheme == "https"
     assert parts.netloc == "porezna.gov.hr"
     assert parts.path == "/rn"
-    assert params["izn"] == ["12300"]
+    assert params["izn"] == ["100"]
     assert params["datv"] == ["20220801_1530"]
     assert params["zki"] == ["abcd" * 8]
     assert "jir" not in params
@@ -444,7 +444,7 @@ def test_get_qr_link_using_jir():
     assert parts.scheme == "https"
     assert parts.netloc == "porezna.gov.hr"
     assert parts.path == "/rn"
-    assert params["izn"] == ["12300"]
+    assert params["izn"] == ["100"]
     assert params["datv"] == ["20220801_1530"]
     assert params["jir"] == ["fakejir"]
     assert "zki" not in params

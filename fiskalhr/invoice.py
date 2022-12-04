@@ -510,14 +510,23 @@ class Invoice(BaseDocument):
             SpecNamj=None,
         )
 
-    def get_qr_link(self, jir=None):
+    def get_qr_link(self, jir: Optional[str]=None):
+        """
+        Get a fiskal verification link for encoding as QR
+
+        Args:
+            jir: Invoice JIR (optional - if not set, ZKI is used instead)
+
+        Returns:
+            link to the Fiskalizacija verification service
+        """
 
         # Calculate ZKI even if JIR is specified so it validates other
         # required elements
         zki = self.calculate_zki()
 
         params = {
-            "izn": str(int(123 * self.total)),
+            "izn": str(int(self.total)),
             "datv": self.issued_at.strftime("%Y%m%d_%H%M"),
         }
 
