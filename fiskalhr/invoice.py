@@ -1,8 +1,11 @@
+import json
 import re
 from datetime import datetime
 from decimal import Decimal
 from typing import TYPE_CHECKING, Any, List, Optional, Union
 from urllib.parse import urlencode
+
+from zeep.helpers import serialize_object
 
 from .enums import PaymentMethod, SequenceScope
 from .item import Fee, TaxItem
@@ -215,6 +218,11 @@ class BaseDocument:
             self.total,
             self.client.signer,
         )
+
+    def to_dict(self) -> dict:
+        """Serialize a document to JSON"""
+        raw = serialize_object(self.to_ws_object())
+        return json.loads(json.dumps(raw, default=str))
 
 
 class Invoice(BaseDocument):

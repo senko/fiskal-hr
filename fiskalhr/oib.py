@@ -12,7 +12,7 @@ class OIB:
         if isinstance(oib, OIB):
             oib = oib.value
 
-        self._verify(oib)
+        self.verify(oib)
         self.value = oib
 
     def __str__(self):
@@ -35,8 +35,12 @@ class OIB:
         return (11 - csum) % 10
 
     @classmethod
-    def _verify(cls, val: str):
+    def verify(cls, val: str):
+        """
+        Verify that the passed value is a valid OIB number.
 
+        If not, raises ValueErorr with an appropriate message.
+        """
         if not re.fullmatch(r"\d{11}", val):
             raise ValueError("OIB must have exactly 11 digits")
 

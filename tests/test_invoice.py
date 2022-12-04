@@ -581,3 +581,39 @@ def test_document():
     inv = Document(fc, **TEST_INVOICE_PARAMS)
 
     inv.to_ws_object()
+
+
+def test_invoice_to_dict():
+    fc = Mock()
+
+    class mock_type_factory:
+        def __getattribute__(self, _):
+            return dict
+
+    fc.type_factory = mock_type_factory()
+    fc.signer.sign_zki_payload.return_value = "abcd" * 8
+    inv = Invoice(fc, **TEST_INVOICE_PARAMS)
+
+    data = inv.to_dict()
+
+    assert data == {
+        "Oib": "12312312316",
+        "USustPdv": True,
+        "DatVrijeme": "01.01.2022T00:00:00",
+        "OznSlijed": "N",
+        "BrRac": {"BrOznRac": 1, "OznPosPr": "X", "OznNapUr": 1},
+        "Pdv": {"Porez": [{"Stopa": "25.00", "Osnovica": "100.00", "Iznos": "25.00"}]},
+        "Pnp": {"Porez": [{"Stopa": "10.00", "Osnovica": "100.00", "Iznos": "10.00"}]},
+        "IznosOslobPdv": "200.00",
+        "IznosMarza": "300.00",
+        "IznosNePodlOpor": "500.00",
+        "Naknade": [{"NazivN": "Fee", "IznosN": "100.00"}],
+        "IznosUkupno": "314.16",
+        "NacinPlac": "G",
+        "OibOper": "12345678903",
+        "ZastKod": "abcdabcdabcdabcdabcdabcdabcdabcd",
+        "NakDost": False,
+        "ParagonBrRac": None,
+        "OstaliPor": None,
+        "SpecNamj": None,
+    }
