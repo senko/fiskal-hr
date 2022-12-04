@@ -518,7 +518,7 @@ class Invoice(BaseDocument):
             SpecNamj=None,
         )
 
-    def get_qr_link(self, jir: Optional[str]=None):
+    def get_qr_link(self, jir: Optional[str] = None):
         """
         Get a fiskal verification link for encoding as QR
 

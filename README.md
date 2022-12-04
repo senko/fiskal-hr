@@ -83,7 +83,7 @@ Coverage report is generated automatically. To export it in HTML form, run `cove
 The tests do not contact Fiskalizacija service or any other external service, nor do they
 require actual certificates. They are entirely self-contained.
 
-More info about testing and certificates is available in [the testing guide](doc/tests.md).
+More info about testing and certificates is available in [the testing guide](doc/testing.md).
 
 ## Contributing
 
