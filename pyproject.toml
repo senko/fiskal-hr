@@ -4,23 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fiskal-hr"
-version = "0.0.1"
-authors = [
-    { name="Senko Rasic", email="senko@senko.net" },
-]
+version = "0.9.0"
+authors = [{ name = "Senko Rasic", email = "senko@senko.net" }]
 description = "Client for Croatian Fiskalizacija tax service"
 readme = "README.md"
 requires-python = ">=3.6"
 keywords = ["fiskalizacija"]
 license = { text = "MIT" }
-classifiers = [
-    "Programming Language :: Python :: 3",
-]
-dependencies = [
-    "cryptography",
-    "xmlsec",
-    "zeep",
-]
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = ["cryptography", "xmlsec", "zeep"]
 
 [project.urls]
 "Homepage" = "https://github.com/senko/fiskal-hr/"
