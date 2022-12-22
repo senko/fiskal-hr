@@ -101,7 +101,7 @@ be bundled with your certificate in a single PEM file, or split into a separate 
 `client.crt` for the certificate and `client.key` for the private key). Both are supported,
 use what suits you best.
 
-4. Download Porezna Uprava (tax authority) certificates
+### Download Porezna Uprava (tax authority) certificates
 
 To connect to the Fiskalizacija service and verify responses, you'll need certificates
 for Porezna Uprava. These also differ for DEMO and production environments.
@@ -117,7 +117,7 @@ and search for:
 Production certificate is available from
 [Porezna Uprava Fiskalizacija web page](https://www.porezna-uprava.hr/HR_Fiskalizacija/Stranice/Certifikati-za-preuzimanje.aspx).
 
-5. Download FINA CA certificates
+### Download FINA CA certificates
 
 Since both your and Fiskalizacija's certificates are signed with FINA, you'll need to get
 those as well. Again, these are separate for demo and production.
