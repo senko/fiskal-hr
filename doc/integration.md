@@ -30,7 +30,7 @@ you can verify the responses are authentic using theirs certificate.
 
 ## Getting the certificates
 
-1. Obtain client certificates from FINA
+### Obtain client certificates from FINA
 
 Which certificates you need depends on whether you're developing and testing
 integration (a "DEMO certificate"), or need it to go live and connect to
@@ -42,7 +42,7 @@ integration), you'll need to sign up for both DEMO and production cert.
 
 The certificates must be obtained from [FINA](https://www.fina.hr/fiskalizacija).
 
-1.1. DEMO certificates
+1. DEMO certificates
 
     Fill in the request form
     [Zahtjev za izdavanje Demo certifikata za fiskalizaciju](https://www.fina.hr/documents/52450/155573/7+Zahtjev+za+RDC_fiskalizacija+-+Demo_06092018.pdf/8c70682a-bd32-c32f-84f0-ce0441dba8ca)
@@ -51,7 +51,7 @@ The certificates must be obtained from [FINA](https://www.fina.hr/fiskalizacija)
 
     The DEMO certificate is free.
 
-1.2. Production certificates
+2. Production certificates
 
     If you haven't already, you'll first need to register your company in FINA's
     PKI database. This will cost you about €10 (one-time fee) and you'll need to show
@@ -64,7 +64,7 @@ The certificates must be obtained from [FINA](https://www.fina.hr/fiskalizacija)
 
     The production certificate costs around €40 and is valid for 5 years.
 
-2. Download issued certificate
+### Download issued certificate
 
 When you are issued the certificate, you'll get notified and will be able
 to download it from FINA's [DEMO cert management page](https://demo-mojcert.fina.hr/finacms/).
@@ -77,7 +77,7 @@ encrypt the certificate. You'll decrypt it in the next step, but it is a good id
 this password and store both the downloaded certificate and the password to a secure cold
 location.
 
-3. Extract client certificate and key
+### Extract client certificate and key
 
 The certificate you download will be in an encrypted binary PKCSv12 format. To decrypt it and
 extract to a more manageable PEM format, use the `openssl` client library:
@@ -127,7 +127,9 @@ You'll need the root CA and both 2020 and 2014 certificates.
 
 Download the production certificates from the same
 [Porezna Uprava Fiskalizacija web page](https://www.porezna-uprava.hr/HR_Fiskalizacija/Stranice/Certifikati-za-preuzimanje.aspx)
-page where they host their own production certificates.
+page where they host their own production certificates. You might need to download additional
+certificates from the
+[FINA CA (root) Certifikati](https://www.fina.hr/ca-fina-root-certifikati) page as well.
 
 Note that for obscure technical reasons, FINA has two (or more) certificates for each
 environment - the CA (possibly multiple) certs, and the *root* CA cert. To simplify management,
@@ -144,7 +146,7 @@ the service operations (how requests must look, how responses must look, and how
 in a WSDL file.
 
 They can be downloaded from
-(Porezna Uprava / Fiskalizacija / Tehničke specifikacije)[https://www.porezna-uprava.hr/HR_Fiskalizacija/Stranice/Tehni%C4%8Dke-specifikacije.aspx]
+[Porezna Uprava / Fiskalizacija / Tehničke specifikacije](https://www.porezna-uprava.hr/HR_Fiskalizacija/Stranice/Tehni%C4%8Dke-specifikacije.aspx)
 page. Again, they are separate for demo and production use.
 
 This package bundles with demo variant of the WSDL for internal testing purposes, but it is
