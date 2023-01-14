@@ -534,7 +534,7 @@ class Invoice(BaseDocument):
         zki = self.calculate_zki()
 
         params = {
-            "izn": str(int(self.total)),
+            "izn": str(int(100 * self.total)),
             "datv": self.issued_at.strftime("%Y%m%d_%H%M"),
         }
 
