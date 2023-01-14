@@ -406,7 +406,7 @@ def test_get_qr_link_using_zki():
         fc,
         oib=TEST_OIB,
         invoice_number="1/X/1",
-        total=100,
+        total=Decimal("123.45"),
         issued_at=datetime(2022, 8, 1, 15, 30),
     )
 
@@ -418,7 +418,7 @@ def test_get_qr_link_using_zki():
     assert parts.scheme == "https"
     assert parts.netloc == "porezna.gov.hr"
     assert parts.path == "/rn"
-    assert params["izn"] == ["100"]
+    assert params["izn"] == ["12345"]
     assert params["datv"] == ["20220801_1530"]
     assert params["zki"] == ["abcd" * 8]
     assert "jir" not in params
@@ -444,7 +444,7 @@ def test_get_qr_link_using_jir():
     assert parts.scheme == "https"
     assert parts.netloc == "porezna.gov.hr"
     assert parts.path == "/rn"
-    assert params["izn"] == ["100"]
+    assert params["izn"] == ["10000"]
     assert params["datv"] == ["20220801_1530"]
     assert params["jir"] == ["fakejir"]
     assert "zki" not in params
