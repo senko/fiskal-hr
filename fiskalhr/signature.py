@@ -77,7 +77,6 @@ class Signer:
 
     @staticmethod
     def _load_hazmat_key(pem_path: str, password: Optional[str]) -> Any:
-
         with open(pem_path, "rb") as key_file:
             return serialization.load_pem_private_key(
                 key_file.read(),

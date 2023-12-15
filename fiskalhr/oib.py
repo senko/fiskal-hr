@@ -8,7 +8,6 @@ class OIB:
     value: str
 
     def __init__(self, oib: Union[str, "OIB"]):
-
         if isinstance(oib, OIB):
             oib = oib.value
 

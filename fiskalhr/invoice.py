@@ -686,7 +686,6 @@ class Document(BaseDocument):
         return self.client.type_factory.PrateciDokumentType
 
     def to_ws_object(self) -> Any:
-
         type_factory = self.get_ws_object_type()
 
         # As a side-effect, this will verify there is minimal info

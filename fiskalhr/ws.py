@@ -170,7 +170,6 @@ class FiskalClient:
         return response.Jir
 
     def change_payment_method(self, invoice: "InvoicePaymentMethodChange"):
-
         self._call_service(
             self.client.service.promijeniNacPlac,
             dict(
@@ -180,7 +179,6 @@ class FiskalClient:
         )
 
     def submit_document(self, doc: "Document") -> str:
-
         response = self._call_service(
             self.client.service.prateciDokumenti,
             dict(
