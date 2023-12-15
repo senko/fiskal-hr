@@ -58,8 +58,10 @@ The certificates must be obtained from [FINA](https://www.fina.hr/fiskalizacija)
     [a few company registration documents](https://www.fina.hr/fiskalizacija#kako-do-certifikata).
 
     You'll also need to fill in
-    [Zahtjev za izdavanje produkcijskog certifikata za fiskalizaciju](https://www.fina.hr/documents/52450/155573/ZahtjevCertFiskal.pdf/5a1b5509-378c-fb1f-ff7e-c95091dd2863?t=1600774713433) (one copy) and
+    [Zahtjev za izdavanje produkcijskog certifikata za fiskalizaciju](https://rdc.fina.hr/obrasci/ZahtjevCertFiskal.pdf) (one copy) and
     [Ugovor o obavljanju usluga certificiranja](https://rdc.fina.hr/obrasci/RDC-ugovor1.pdf)
+    or
+    [Ugovor o obavljanju usluga certificiranja za poslovne subjekte](https://rdc.fina.hr/obrasci/UgovorAplikacijskieIDAS_OSPD.pdf)
     (two copies).
 
     The production certificate costs around €40 and is valid for 5 years.
